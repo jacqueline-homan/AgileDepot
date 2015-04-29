@@ -1,6 +1,6 @@
 == README
 
-This app follows verbatim the Depot App in the Pragmatic Programmers book, "Agile Web Development with Rails 4" by David Heinemeier Hansson, Sam Ruby, and Dave Thomas.
+This app follows verbatim the Depot App in the Pragmatic Programmers book, "Agile Web Development with Rails 4" by David Heinemeier Hansson, Sam Ruby, and Dave Thomas. The intention of this was (and is) to be able to write a comprehensive technical review of how and where the book falls short.
 
 
 * Ruby 2.1.2 p95
