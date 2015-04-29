@@ -1,11 +1,11 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app follows verbatim the Depot App in the Pragmatic Programmers book, "Agile Web Development with Rails 4" by David Heinemeier Hansson, Sam Ruby, and Dave Thomas.
 
-Things you may want to cover:
 
-* Ruby version
+* Ruby 2.1.2 p95
+
+* Rails 4.2.1
 
 * System dependencies
 
