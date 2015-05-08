@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.carts {
+.carts, #side #cart {
 	.item_price, .total_line {
 		text-align: right;
+		color: white;
 	}
 
 	.total_line .total_cell {

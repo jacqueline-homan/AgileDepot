@@ -15,13 +15,19 @@
 			<div>
 			  <%= image_tag("logo.png") %>
 		    </div>
-		    <%= Time.now %>
+		    
+		    <div id="cart">
+		      <%= render @cart %>
+		    </div>
 			<ul>
 				<li><a href="http://www....">Home</a></li>
 				<li><a href="http://www..../faq">Questions</a></li>
 				<li><a href="http://www..../news">News</a></li>
 				<li><a href="http://www..../contact">Contact</a></li>
 			</ul>
+		  <div id="clock">
+		    <%= Time.now %>
+		  </div>
 		</div>
 		<div id="main">
 			<%= yield %>
