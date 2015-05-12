@@ -4,7 +4,9 @@
 //  });
 //});
 
-$('.entry>img').on('click', function() {
+var productImage = $('.entry>img');
+
+productImage.on('click', function() {
     
     $(this).closest('.entry').find(':submit').click();
 
