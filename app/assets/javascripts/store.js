@@ -4,10 +4,19 @@
 //  });
 //});
 
-var productImage = $('.entry>img');
+//var productImage = $('.store .entry > img');
 
-productImage.on('click', function() {
+//productImage.on('click', function() {
     
-    $(this).closest('.entry').find(':submit').click();
+//    $(this).closest('.entry').find(':submit').click();
 
+//});
+
+// Clicking on a product image to enlarge it
+$(function ()
+{
+    $('img').on('click', function ()
+    {
+        $(this).width(300);
+    });
 });
