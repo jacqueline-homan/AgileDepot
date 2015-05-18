@@ -1,6 +1,6 @@
 class LineItemsController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:create]
+  before_action :set_cart, only: [:create, :decrement] #ActiveRecord callback
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -44,9 +44,9 @@ class LineItemsController < ApplicationController
   # PATCH/PUT /line_items/1
   # PATCH/PUT /line_items/1.json
   def decrement
-    @cart = current_cart
+    #@cart = current_cart
     @line_item = @cart.decrement_line_item_quantity(params[:id]) #passing in line_item.id
-    
+
     respond_to do |format|
       if @line_item.save
         format.html{redirect_to store_path, notice: 'Item(s) in cart updated.'}
