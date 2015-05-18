@@ -43,6 +43,23 @@ class LineItemsController < ApplicationController
 
   # PATCH/PUT /line_items/1
   # PATCH/PUT /line_items/1.json
+  def decrement
+    @cart = current_cart
+    @line_item = @cart.decrement_line_item_quantity(params[:id]) #passing in line_item.id
+    
+    respond_to do |format|
+      if @line_item.save
+        format.html{redirect_to store_path, notice: 'Item(s) in cart updated.'}
+        format.js {@current_item = @line_item}
+        format.json { head :ok }
+      else
+        format.html { render action: "edit" }
+        format.js {@current_item = @line_item}
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def update
     respond_to do |format|
       if @line_item.update(line_item_params)
